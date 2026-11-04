@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="SwapChain — современная платформа обмена вещами. Загружай свои вещи, находи новые и открывай возможности умного обмена.">
+  <title>SwapChain — вещи меняются, возможности остаются</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="announcement">
+    <span class="announcement-dot" aria-hidden="true"></span>
+    Меньше ненужных покупок. Больше возможностей.
+    <a href="#how-it-works">Узнать больше <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="SwapChain — главная">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 42 42" fill="none"><path d="M10 14h20l-5.2-5.2M32 28H12l5.2 5.2" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 14l-5 5M11 28l5-5" stroke="currentColor" stroke-width="3.8" stroke-linecap="round"/></svg>
+        </span>
+        <span>swap<span class="brand-accent">chain</span><span class="brand-period">.</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#how-it-works">Как это работает</a>
+        <a href="#ai-match">AI-подбор <span class="nav-new">NEW</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-login" href="/login">Войти</a>
+        <a class="btn btn-dark btn-sm" href="#add">Разместить вещь <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <details class="mobile-nav">
+        <summary aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </summary>
+        <nav aria-label="Мобильная навигация">
+          <a href="#catalog">Каталог</a>
+          <a href="#how-it-works">Как это работает</a>
+          <a href="#ai-match">AI-подбор</a>
+          <a href="#add">Разместить вещь</a>
+          <a href="/login">Войти</a>
+          <a href="/register">Регистрация</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-icon">✦</span> УМНЫЙ ОБМЕН ВЕЩАМИ</div>
+          <h1>У вещей есть <span class="hero-highlight">вторая жизнь<span class="hand-drawn-underline" aria-hidden="true"></span></span><span class="hero-dot">.</span></h1>
+          <p class="hero-lead">Твой ненужный предмет может стать чьей-то находкой. Обменивайся без денег, открывай новое и находи идеальные совпадения с помощью ИИ.</p>
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn-dark btn-lg">Исследовать каталог <span class="btn-circle" aria-hidden="true">↗</span></a>
+            <a href="#add" class="btn btn-outline btn-lg">Добавить вещь <span aria-hidden="true">＋</span></a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-avatars" aria-hidden="true"><span>♻</span><span>✳</span><span>✦</span></div>
+            <p><strong>Меньше лишнего.</strong><br>Больше полезных находок.</p>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Иллюстрация обмена вещами">
+          <div class="hero-art-glow" aria-hidden="true"></div>
+          <span class="hero-art-kicker">SWAP CULTURE / 2026</span>
+          <span class="hero-art-orbit hero-art-orbit-one" aria-hidden="true"></span>
+          <span class="hero-art-orbit hero-art-orbit-two" aria-hidden="true"></span>
+          <span class="hero-art-star star-one" aria-hidden="true">✳</span>
+          <span class="hero-art-star star-two" aria-hidden="true">✦</span>
+          <img class="hero-headphones" src="{{ url_for('static', filename='img/headphones.svg') }}" alt="Стильные наушники — пример вещи для обмена">
+          <div class="floating-tag tag-top"><span class="tag-icon">↗</span><span>Вещи в новой роли</span></div>
+          <div class="floating-tag tag-bottom"><span class="tag-mini">✦</span><span><strong>AI Match</strong><small>Умные рекомендации</small></span></div>
+          <div class="hero-art-bottom"><span>ОТДАЙ ТО, ЧТО НЕ НУЖНО</span><span>↔</span><span>НАЙДИ ТО, ЧТО ЛЮБИШЬ</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits-section" aria-label="Преимущества платформы">
+      <div class="container benefit-grid">
+        <div class="benefit"><span class="benefit-symbol">↔</span><div><h3>Без денежных сделок</h3><p>Только взаимовыгодный обмен</p></div></div>
+        <div class="benefit"><span class="benefit-symbol">✳</span><div><h3>Умные совпадения</h3><p>ИИ поможет найти подходящее</p></div></div>
+        <div class="benefit"><span class="benefit-symbol">◎</span><div><h3>Меньше отходов</h3><p>Продлеваем жизнь хорошим вещам</p></div></div>
+      </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section class="section catalog-section" id="catalog">
+      <div class="container">
+        <div class="section-heading catalog-heading">
+          <div><span class="section-kicker"><span class="kicker-line"></span> ЧТО МОЖНО ОБМЕНЯТЬ</span><h2>Находки, которые <em>ждут тебя.</em></h2></div>
+          <p>От любимых книг до техники — у каждого предмета есть шанс найти нового владельца.</p>
+        </div>
+
+        <form class="search-bar" action="/static" method="GET" role="search">
+          <span class="search-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="10.8" cy="10.8" r="6.7" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <label class="sr-only" for="catalog-search">Поиск по каталогу</label>
+          <input id="catalog-search" type="search" name="search" value="{{ request.args.get('search', '') }}" placeholder="Что ты хочешь найти? Например, наушники...">
+          <button type="submit" class="btn btn-dark search-button">Найти <span aria-hidden="true">↗</span></button>
+        </form>
+
+        <div class="catalog-toolbar"><span class="catalog-caption">Исследуй категории</span><div class="category-links"><a href="#catalog" class="category-chip active">Все вещи</a><a href="#catalog" class="category-chip">Электроника</a><a href="#catalog" class="category-chip">Одежда</a><a href="#catalog" class="category-chip">Книги</a><a href="#catalog" class="category-chip">Для дома</a><a href="#catalog" class="category-chip">Спорт</a></div></div>
+
+        {% if items is defined and items %}
+        <div class="product-grid">
+          {% for item in items %}
+          <article class="product-card">
+            <div class="product-image product-image--dynamic">
+              {% if item.image_path is defined and item.image_path %}
+              <img src="{{ url_for('static', filename=item.image_path) }}" alt="{{ item.title }}" loading="lazy">
+              {% else %}
+              <img src="{{ url_for('static', filename='img/headphones.svg') }}" alt="Изображение товара пока не добавлено" loading="lazy">
+              {% endif %}
+              <span class="product-type">Обмен</span>
+            </div>
+            <div class="product-content"><div class="product-meta"><span>Вещь №{{ item.id }}</span><span class="meta-dot">•</span><span>{{ item.condition or 'Состояние не указано' }}</span></div><h3>{{ item.title }}</h3><p class="product-want">{{ item.desired_exchange or 'Открыт(а) к предложениям' }}</p><a href="#profile" class="product-link">Предложить обмен <span aria-hidden="true">↗</span></a></div>
+          </article>
+          {% endfor %}
+        </div>
+        {% else %}
+        <p class="demo-notice"><span>✦</span> Демо-каталог — примеры оформления карточек. Реальные объявления появятся после подключения маршрутов Flask.</p>
+        <div class="product-grid">
+          <article class="product-card"><div class="product-image bg-mint"><img src="{{ url_for('static', filename='img/headphones.svg') }}" alt="Беспроводные наушники" loading="lazy"><span class="product-type">Электроника</span></div><div class="product-content"><div class="product-meta"><span>Отличное состояние</span><span class="meta-dot">•</span><span>Пример</span></div><h3>Беспроводные наушники</h3><p class="product-want">Хочу обменять на: книги / аксессуары</p><a href="#profile" class="product-link">Подробнее <span aria-hidden="true">↗</span></a></div></article>
+          <article class="product-card"><div class="product-image bg-peach"><img src="{{ url_for('static', filename='img/camera.svg') }}" alt="Фотоаппарат" loading="lazy"><span class="product-type">Техника</span></div><div class="product-content"><div class="product-meta"><span>Хорошее состояние</span><span class="meta-dot">•</span><span>Пример</span></div><h3>Винтажная камера</h3><p class="product-want">Открыт(а) к предложениям</p><a href="#profile" class="product-link">Подробнее <span aria-hidden="true">↗</span></a></div></article>
+          <article class="product-card"><div class="product-image bg-lavender"><img src="{{ url_for('static', filename='img/sneakers.svg') }}" alt="Кроссовки" loading="lazy"><span class="product-type">Одежда</span></div><div class="product-content"><div class="product-meta"><span>Отличное состояние</span><span class="meta-dot">•</span><span>Пример</span></div><h3>Кроссовки Urban Classic</h3><p class="product-want">Хочу обменять на: спортивные вещи</p><a href="#profile" class="product-link">Подробнее <span aria-hidden="true">↗</span></a></div></article>
+          <article class="product-card"><div class="product-image bg-butter"><img src="{{ url_for('static', filename='img/lamp.svg') }}" alt="Настольная лампа" loading="lazy"><span class="product-type">Дом</span></div><div class="product-content"><div class="product-meta"><span>Хорошее состояние</span><span class="meta-dot">•</span><span>Пример</span></div><h3>Дизайнерская лампа</h3><p class="product-want">Открыт(а) к предложениям</p><a href="#profile" class="product-link">Подробнее <span aria-hidden="true">↗</span></a></div></article>
+          <article class="product-card"><div class="product-image bg-ice"><img src="{{ url_for('static', filename='img/books.svg') }}" alt="Набор книг" loading="lazy"><span class="product-type">Книги</span></div><div class="product-content"><div class="product-meta"><span>Хорошее состояние</span><span class="meta-dot">•</span><span>Пример</span></div><h3>Набор книг для чтения</h3><p class="product-want">Хочу обменять на: другую литературу</p><a href="#profile" class="product-link">Подробнее <span aria-hidden="true">↗</span></a></div></article>
+          <article class="product-card"><div class="product-image bg-sand"><img src="{{ url_for('static', filename='img/skateboard.svg') }}" alt="Скейтборд" loading="lazy"><span class="product-type">Спорт</span></div><div class="product-content"><div class="product-meta"><span>Хорошее состояние</span><span class="meta-dot">•</span><span>Пример</span></div><h3>Классический скейтборд</h3><p class="product-want">Открыт(а) к предложениям</p><a href="#profile" class="product-link">Подробнее <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+        {% endif %}
+      </div>
+    </section>
+
+    <!-- AI / MATCHING -->
+    <section class="ai-section" id="ai-match">
+      <div class="container ai-layout">
+        <div class="ai-copy"><span class="section-kicker light-kicker"><span class="kicker-line"></span> УМНЫЙ ПОИСК ОБМЕНОВ</span><div class="ai-status"><span class="status-pulse"></span> КОНЦЕПТ ФУНКЦИИ ИИ</div><h2>Не ищи совпадение. <em>Позволь ему найти тебя.</em></h2><p>Добавь вещь и укажи, что хочешь получить — или оставь пожелания пустыми. В будущем ИИ проанализирует описание и фото, а алгоритм предложит прямой или цепочный обмен.</p><ul class="ai-points"><li><span>01</span> Анализ описания и фотографий</li><li><span>02</span> Подбор с учётом твоих пожеланий</li><li><span>03</span> Поиск цепочек обменов нескольких вещей</li></ul><a href="#add" class="btn btn-lime btn-lg">Подготовить свою вещь <span aria-hidden="true">↗</span></a></div>
+        <div class="ai-visual" aria-label="Демонстрация будущего ИИ-подбора">
+          <div class="ai-visual-top"><div class="ai-visual-logo">✳ <span>swapchain<span class="ai-logo-accent"> ai</span></span></div><span class="ai-preview-label">ПРИМЕР ИНТЕРФЕЙСА</span></div>
+          <div class="ai-example-title">Возможное совпадение<span class="ai-sparkle">✦</span></div>
+          <div class="ai-exchange-row"><div class="ai-item"><div class="ai-item-photo ai-photo-left"><img src="{{ url_for('static', filename='img/headphones.svg') }}" alt="Наушники"></div><span>Твои наушники</span></div><div class="ai-exchange-arrows" aria-hidden="true">⇄</div><div class="ai-item"><div class="ai-item-photo ai-photo-right"><img src="{{ url_for('static', filename='img/camera.svg') }}" alt="Фотоаппарат"></div><span>Винтажная камера</span></div></div>
+          <div class="ai-result"><span><span class="ai-result-spark">✧</span> Совместимость (пример)</span><strong>92%</strong></div><div class="ai-progress" aria-hidden="true"><span></span></div><div class="ai-visual-bottom"><span>Почему подходит?</span><p>Пример объяснения: оба участника заинтересованы во взаимном обмене.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how-section" id="how-it-works"><div class="container"><div class="section-heading how-heading"><div><span class="section-kicker"><span class="kicker-line"></span> ВСЁ ПРОСТО</span><h2>Три шага до <em>новой находки.</em></h2></div><p>Самое интересное начинается с одной вещи, которой ты больше не пользуешься.</p></div><div class="steps-grid"><article class="step-card"><div class="step-top"><span class="step-number">01 /</span><span class="step-art step-art-one">＋</span></div><h3>Добавь свою вещь</h3><p>Загрузи фотографии, опиши состояние и, если хочешь, укажи желаемый обмен.</p><span class="step-line"></span></article><article class="step-card"><div class="step-top"><span class="step-number">02 /</span><span class="step-art step-art-two">✳</span></div><h3>Найди совпадение</h3><p>Изучай каталог самостоятельно или используй будущие рекомендации ИИ.</p><span class="step-line"></span></article><article class="step-card"><div class="step-top"><span class="step-number">03 /</span><span class="step-art step-art-three">↗</span></div><h3>Договорись об обмене</h3><p>Предложи одну или несколько вещей и подтверди обмен с другим участником.</p><span class="step-line"></span></article></div></div></section>
+
+    <!-- ADD FORM -->
+    <section class="section add-section" id="add"><div class="container add-layout"><div class="add-intro"><span class="section-kicker"><span class="kicker-line"></span> НАЧАТЬ ПРОСТО</span><h2>Пора дать вещи <em>новую историю.</em></h2><p>Не нужна идеальная вещь — важно, чтобы она могла порадовать кого-то ещё. Заполни карточку, а остальное мы постепенно автоматизируем.</p><div class="add-note"><span class="add-note-symbol">✦</span><div><strong>Два режима подбора</strong><span>Укажи желаемую вещь или оставь поле пустым, чтобы получать предложения по интересам.</span></div></div></div>
+      <div class="form-panel"><div class="form-panel-top"><div><span class="form-overline">НОВОЕ ОБЪЯВЛЕНИЕ</span><h3>Расскажи о своей вещи</h3></div><span class="form-top-symbol" aria-hidden="true">↗</span></div>
+        <form action="/add" method="POST" enctype="multipart/form-data" class="item-form">
+          <div class="form-field"><label for="item-title">Название вещи <span>*</span></label><input id="item-title" type="text" name="title" placeholder="Например, беспроводные наушники" maxlength="120" required></div>
+          <div class="form-field"><label for="item-description">Описание <span>*</span></label><textarea id="item-description" name="description" rows="4" placeholder="Бренд, модель, особенности, что входит в комплект..." required></textarea></div>
+          <div class="form-two-col"><div class="form-field"><label for="item-category">Категория <span>*</span></label><select id="item-category" name="category_id" required><option value="" selected disabled>Выбери категорию</option><option value="1">Электроника</option><option value="2">Одежда</option><option value="3">Книги</option><option value="4">Спорт</option><option value="5">Мебель</option><option value="6">Игры</option><option value="7">Аксессуары</option><option value="8">Другое</option></select></div><div class="form-field"><label for="item-condition">Состояние <span>*</span></label><select id="item-condition" name="condition" required><option value="" selected disabled>Выбери состояние</option><option value="new">Новое</option><option value="excellent">Отличное</option><option value="good">Хорошее</option><option value="fair">Есть следы использования</option></select></div></div>
+          <div class="form-field"><label for="desired-exchange">Что хочешь взамен? <span class="optional">необязательно</span></label><textarea id="desired-exchange" name="desired_exchange" rows="3" placeholder="Например, камера или книги. Можно оставить пустым для свободного подбора."></textarea></div>
+          <div class="form-field"><label for="item-photos">Фотографии <span class="optional">до 5 файлов</span></label><label for="item-photos" class="upload-area"><span class="upload-symbol" aria-hidden="true">↑</span><strong>Выбрать фотографии</strong><span>JPG, PNG или WebP • до 5 фото</span></label><input id="item-photos" class="upload-input" type="file" name="photos" accept="image/jpeg,image/png,image/webp" multiple><p class="form-hint">Ограничения по количеству, размеру и формату файлов проверяются сервером после реализации /add.</p></div>
+          <button class="btn btn-dark submit-button" type="submit">Опубликовать вещь <span aria-hidden="true">↗</span></button>
+          <p class="form-disclaimer">Для публикации понадобится авторизация. Сейчас форма — интерфейс; сохранение подключается в Flask.</p>
+        </form>
+      </div>
+    </div></section>
+
+    <!-- PROFILE -->
+    <section class="profile-section" id="profile"><div class="container profile-inner"><div><span class="profile-kicker">ТВОЁ ПРОСТРАНСТВО</span><h2>Все обмены — <em>в одном месте.</em></h2><p>Создай аккаунт, чтобы управлять своими вещами и получать предложения от других участников.</p></div><div class="profile-actions"><a class="btn btn-lime btn-lg" href="/register">Создать аккаунт <span aria-hidden="true">↗</span></a><a class="profile-login" href="/login">Уже есть аккаунт? Войти <span aria-hidden="true">→</span></a></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">↔</span><span>swap<span class="brand-accent">chain</span><span class="brand-period">.</span></span></a><p>Больше обмена. Меньше лишнего. Платформа, где каждая вещь получает новый шанс.</p></div><nav aria-label="Навигация в подвале"><a href="#catalog">Каталог</a><a href="#ai-match">AI-подбор</a><a href="#how-it-works">Как это работает</a><a href="#add">Добавить вещь</a></nav></div><div class="footer-bottom"><span>© 2026 SwapChain. Учебный проект.</span><span>Сделано с заботой о вещах и планете <span aria-hidden="true">✳</span></span></div></div></footer>
+</body>
+</html>
