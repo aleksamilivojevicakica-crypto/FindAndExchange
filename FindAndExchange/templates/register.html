@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | SwapChain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="auth-page">
+    <div class="container">
+        <h1>Создать аккаунт</h1>
+        <form action="{{ url_for('register_page') }}" method="POST">
+            <input type="text" name="nickname" placeholder="Никнейм" autocomplete="nickname" required>
+            <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+            <input type="password" name="password" placeholder="Пароль (минимум 8 символов)" autocomplete="new-password" minlength="8" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="auth-footer">
+            Уже есть аккаунт? <a href="{{ url_for('login_page') }}">Войти</a>
+            <p><a href="{{ url_for('index') }}">← На главную</a></p>
+        </div>
+    </div>
+</body>
+</html>
